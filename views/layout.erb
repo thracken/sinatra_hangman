@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Hangman - Built With Sinatra</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="wrapper" class="center">
+  <div id="top">
+    <h1>HANGMAN</H1>
+    <p>Guess letters to see if you can figure out the hidden word.<br/>
+    If you get 6 letters wrong, you'll lose!</p>
+  </div><!--#top-->
+  <div id="bottom">
+    <%= yield %>
+  </div><!--#bottom-->
+</div><!--#wrapper-->
+</body>
+</html>
