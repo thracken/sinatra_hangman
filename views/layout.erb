@@ -9,8 +9,15 @@
     <h1>HANGMAN</H1>
     <p>Guess letters to see if you can figure out the hidden word.<br/>
     If you get 6 letters wrong, you'll lose!</p>
+    <p>You can get <strong><%= 6-session[:wrong_guesses] %></strong> more guesses wrong.</p>
   </div><!--#top-->
   <div id="bottom">
+    <h1>
+    <%= session[:hidden]  %>
+    </h1>
+    <p>
+      <%= session[:message] %>
+    </p>
     <%= yield %>
   </div><!--#bottom-->
 </div><!--#wrapper-->

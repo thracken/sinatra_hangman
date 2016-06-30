@@ -1,1 +1,15 @@
-"This is the index!"
+<h3>Guess a letter:</h3>
+
+<form method="POST" action="/">
+<input type="text" name="guess" pattern="[A-Za-z]{1}" autofocus />
+<input type="submit" value="Guess" />
+</form>
+
+<% if session[:wrong_letters].length > 0 %>
+  <%= "<h3>Incorrect letters:</h3>" %>
+  <%= "<h3>" %>
+  <% session[:wrong_letters].each do |x| %>
+  <%= x + " " %>
+  <% end %>
+  <%= "</h3>" %>
+<% end %>
